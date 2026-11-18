@@ -31,12 +31,8 @@ A Single Page Application (SPA) administrator portal and storefront catalog buil
    ```bash
    npm install
    ```
-3. **Start the API** in a terminal:
-   ```bash
-   npm run server
-   ```
-4. **Start the app** in a second terminal:
+3. **Start the app and API**:
    ```bash
    npm run dev
    ```
-   Open the local URL printed by Vite. The API must be running on port `3001` for inventory and store details to load.
+   This starts Vite and the API together. Open the local URL printed by Vite.
