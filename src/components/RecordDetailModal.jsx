@@ -53,7 +53,7 @@ export default function RecordDetailModal({ record, onClose }) {
           </label>
 
           <label>
-            Price ($)
+            Price (KSh)
             <input
               type="number"
               step="0.01"

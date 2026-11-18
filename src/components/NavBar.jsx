@@ -6,23 +6,25 @@ export default function NavBar() {
 
   return (
     <header className="navbar">
-      <div className="nav-slot nav-left">
+      <NavLink to="/" className="brand-link" aria-label="VinylCrate home">
+        <span className="brand-disc" aria-hidden="true"><span /></span>
+        <span className="brand-copy">
+          <strong>VINYLCRATE</strong>
+          <small>NAIROBI · RECORD STORE</small>
+        </span>
+      </NavLink>
+
+      <nav className="nav-links" aria-label="Main navigation">
         <NavLink to="/" end className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
           Home
         </NavLink>
-      </div>
-
-      <div className="nav-slot nav-center">
         <NavLink to="/shop" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
           Shop <span className="badge">{records.length}</span>
         </NavLink>
-      </div>
-
-      <div className="nav-slot nav-right">
         <NavLink to="/admin" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
           Admin Portal
         </NavLink>
-      </div>
+      </nav>
     </header>
   );
 }

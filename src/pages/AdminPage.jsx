@@ -30,7 +30,7 @@ export default function AdminPage() {
       nextErrors.origin = 'Select or enter a valid genre: Jazz, Rock, Hip-Hop, or Soul.';
     }
     if (!formData.price || Number(formData.price) <= 0) {
-      nextErrors.price = 'Price must be greater than $0.00.';
+      nextErrors.price = 'Price must be greater than KSh 0.00.';
     }
     setErrors(nextErrors);
     return Object.keys(nextErrors).length === 0;
@@ -49,7 +49,11 @@ export default function AdminPage() {
   return (
     <section className="admin-wrapper">
       <form className="admin-card" onSubmit={handleSubmit} noValidate>
-        <h2>Add New Vinyl Pressing</h2>
+        <div className="admin-heading">
+          <span className="section-kicker">THE BACK ROOM</span>
+          <h2>Add New Vinyl Pressing</h2>
+          <p>Keep the Nairobi crates fresh. Add a record to the shop inventory.</p>
+        </div>
 
         <div className="field-group">
           <label htmlFor={nameId}>Album Name</label>
@@ -101,18 +105,18 @@ export default function AdminPage() {
         </div>
 
         <div className="field-group">
-          <label htmlFor={priceId}>Price ($)</label>
+          <label htmlFor={priceId}>Price (KSh)</label>
           <input
             id={priceId}
             type="number"
             step="0.01"
-            placeholder="29.99"
+            placeholder="3900"
             className={errors.price ? 'input-error' : ''}
             value={formData.price}
             onChange={(e) => setFormData({ ...formData, price: e.target.value })}
           />
           <small className={errors.price ? 'error-text' : 'assistive-text'}>
-            {errors.price || 'Retail sticker price in USD'}
+            {errors.price || 'Retail price in Kenyan shillings'}
           </small>
         </div>
 

@@ -18,5 +18,5 @@ test('shows validation error messages when submitting an empty form', async () =
 
   expect(await screen.findByText(/album name is required/i)).toBeInTheDocument();
   expect(screen.getByText(/select or enter a valid genre/i)).toBeInTheDocument();
-  expect(screen.getByText(/price must be greater than \$0\.00/i)).toBeInTheDocument();
+  expect(screen.getByText(/price must be greater than ksh 0\.00/i)).toBeInTheDocument();
 });

@@ -82,7 +82,7 @@ describe('ShopPage Filtering & CRUD Operations', () => {
     await user.type(priceInput, '39.99');
     await user.click(screen.getByRole('button', { name: /save changes/i }));
 
-    expect(await screen.findByText('$39.99')).toBeInTheDocument();
+    expect(await screen.findByText('KSh 39.99')).toBeInTheDocument();
   });
 
   test('allows admin to delete a record (DELETE) via detail modal', async () => {

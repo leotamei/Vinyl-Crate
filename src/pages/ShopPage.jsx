@@ -44,6 +44,13 @@ export default function ShopPage() {
       />
 
       <section className="shop-grid-wrapper">
+        <div className="shop-heading">
+          <div>
+            <span className="section-kicker">CURATED IN NAIROBI</span>
+            <h1>Find your next spin</h1>
+          </div>
+          <p>{filteredRecords.length} {filteredRecords.length === 1 ? 'record' : 'records'} in the crate</p>
+        </div>
         <div className="shop-grid">
           {filteredRecords.map((record) => (
             <RecordCard
