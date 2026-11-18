@@ -1,0 +1,71 @@
+{
+  "store_info": [
+    {
+      "id": "1",
+      "name": "VinylCrate",
+      "tagline": "The go-to crate for classic pressings & fresh wax.",
+      "description": "Independent neighborhood record shop specializing in curated first pressings, 180g audiophile reissues, and local independent releases.",
+      "phone_number": "555-0194",
+      "address": "412 Groove Ave, Suite B",
+      "hours": "Tue–Sun: 11:00 AM – 8:00 PM"
+    }
+  ],
+  "records": [
+    {
+      "id": "1",
+      "name": "Kind of Blue",
+      "description": "Miles Davis • Mint (M) — 1959 Columbia 6-Eye pressing, warm analog mastering.",
+      "origin": "Jazz",
+      "price": 34.99
+    },
+    {
+      "id": "2",
+      "name": "Rumours",
+      "description": "Fleetwood Mac • Near Mint (NM) — 1977 textured sleeve with original lyric insert.",
+      "origin": "Rock",
+      "price": 28.50
+    },
+    {
+      "id": "3",
+      "name": "Illmatic",
+      "description": "Nas • Very Good Plus (VG+) — 1994 original pressing, crisp drum breaks.",
+      "origin": "Hip-Hop",
+      "price": 31.00
+    },
+    {
+      "id": "4",
+      "name": "What's Going On",
+      "description": "Marvin Gaye • Near Mint (NM) — Gatefold Tamla reissue, lush string arrangement.",
+      "origin": "Soul",
+      "price": 29.99
+    },
+    {
+      "id": "5",
+      "name": "A Love Supreme",
+      "description": "John Coltrane • Mint (M) — Impulse! gatefold pressing, heavyweight 180g vinyl.",
+      "origin": "Jazz",
+      "price": 36.00
+    },
+    {
+      "id": "6",
+      "name": "Dark Side of the Moon",
+      "description": "Pink Floyd • Very Good Plus (VG+) — Includes original posters and stickers.",
+      "origin": "Rock",
+      "price": 39.50
+    },
+    {
+      "id": "7",
+      "name": "Madvillainy",
+      "description": "Madvillain • Mint (M) — Stones Throw 2xLP pressing, clean jacket corners.",
+      "origin": "Hip-Hop",
+      "price": 32.50
+    },
+    {
+      "id": "8",
+      "name": "Songs in the Key of Life",
+      "description": "Stevie Wonder • Near Mint (NM) — Double LP with 7-inch bonus EP and booklet.",
+      "origin": "Soul",
+      "price": 42.00
+    }
+  ]
+}
