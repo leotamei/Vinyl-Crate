@@ -34,6 +34,8 @@ beforeEach(() => {
 
 afterEach(() => {
   vi.restoreAllMocks();
+  vi.unstubAllEnvs();
+  localStorage.clear();
 });
 
 describe('ShopPage Filtering & CRUD Operations', () => {
@@ -102,5 +104,28 @@ describe('ShopPage Filtering & CRUD Operations', () => {
     await user.click(screen.getByRole('button', { name: /delete record/i }));
 
     expect(screen.queryByText('Kind of Blue')).not.toBeInTheDocument();
+  });
+
+  test('uses bundled records and saves edits in browser-only demo mode', async () => {
+    vi.stubEnv('PROD', true);
+    const user = userEvent.setup();
+
+    render(
+      <MemoryRouter>
+        <InventoryProvider>
+          <ShopPage />
+        </InventoryProvider>
+      </MemoryRouter>
+    );
+
+    await user.click(await screen.findByText('Kind of Blue'));
+    const priceInput = screen.getByLabelText(/price/i);
+    await user.clear(priceInput);
+    await user.type(priceInput, '4200');
+    await user.click(screen.getByRole('button', { name: /save changes/i }));
+
+    expect(await screen.findByText('KSh 4,200.00')).toBeInTheDocument();
+    expect(globalThis.fetch).not.toHaveBeenCalled();
+    expect(JSON.parse(localStorage.getItem('vinyl-crate-demo-records'))[0].price).toBe(4200);
   });
 });
