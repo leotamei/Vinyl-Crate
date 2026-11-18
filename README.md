@@ -26,3 +26,17 @@ A Single Page Application (SPA) administrator portal and storefront catalog buil
    ```bash
    git clone <your-github-repo-url>
    cd vinyl-crate
+   ```
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+3. **Start the API** in a terminal:
+   ```bash
+   npm run server
+   ```
+4. **Start the app** in a second terminal:
+   ```bash
+   npm run dev
+   ```
+   Open the local URL printed by Vite. The API must be running on port `3001` for inventory and store details to load.
